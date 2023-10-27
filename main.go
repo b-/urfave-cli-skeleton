@@ -1,7 +1,7 @@
 package main
 
 import (
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 
@@ -38,7 +38,7 @@ func main() {
 				})
 			}
 			if ctx.Bool("quiet") {
-				logrus.SetOutput(ioutil.Discard)
+				logrus.SetOutput(io.Discard)
 			}
 
 			return nil
